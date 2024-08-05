@@ -1,0 +1,226 @@
+:root {
+    --meiaumBlack: rgb(16,0,27);
+    --meiaumOrange: rgb(253,110,80);
+    --meiaumPink: rgb(243,49,99);
+    --meiaumPurple: rgb(196,41,117);
+    --meiaumWhite: rgb(255,255,255);
+    --meiaumYellow: rgb(255,209,74);
+}
+
+body {
+    background-color: var(--meiaumBlack);
+    font-family: "IBM Plex Serif";
+}
+
+dd {
+    margin-left: 2ex;
+}
+
+details {
+    background-color: var(--meiaumYellow) !important;
+    border-bottom: 3px solid var(--meiaumPink);
+    border-left: 3px solid var(--meiaumBlack);
+    border-radius: 0px !important;
+    border-right: 3px solid var(--meiaumPink);
+    border-top: 3px solid var(--meiaumBlack);
+    box-shadow: 0.05em 0.1em 5px 0.01em #00000057;
+    color: hsl(157 75%);
+    font-size: 0.9em;
+}
+
+details :hover {
+    cursor: zoom-in;
+}
+
+details[open] :hover {
+    cursor: zoom-out;
+}
+
+dt {
+    margin-bottom: 1em;
+    margin-left: 0ex;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h2 {
+    color: darkred;
+    color: var(--meiaumPurple);
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+h2:before {
+    content: "☛ ";
+}
+
+h3 {
+    color: darkblue;
+    color: darkgreen;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3:before {
+    content: "☛☛ ";
+}
+
+h4 {
+    color: darkblue;
+    color: var(--meiaumPink);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h4:before {
+    content: "☛☛☛ ";
+}
+
+h5 {
+    color: darkorchid;
+    color: var(--meiaumPurple);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h5:before {
+    content: "☛☛☛☛ ";
+}
+
+li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-left: 0px;
+}
+
+p.footnote {
+    margin-left: 6ex;
+    text-indent: -6ex;
+}
+
+pre {
+    background-color: white;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+pre.code, pre.example, pre.src {
+    border: 2px dashed black;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#content {
+    background-color: var(--meiaumWhite);
+    border: solid 1px rgb(0,0,0);
+    box-shadow: 5px 5px var(--meiaumPurple);
+    margin-bottom: 1em;
+    margin: auto;
+    padding: 2em;
+    width: 82%;
+}
+
+#content a {
+    background-color: var(--meiaumYellow);
+    border-bottom: 3px solid var(--meiaumPink);
+    border-left: 3px solid var(--meiaumBlack);
+    border-right: 3px solid var(--meiaumPink);
+    border-top: 3px solid var(--meiaumBlack);
+    filter: brightness(100%);
+    font-family: "IBM Plex Sans";
+    font-size: 18px;
+    font-weight: 500;
+    padding: 2px 5px;
+    transform: scale(1);
+    transition-duration: 0.3s;
+    transition-property: filter, transform;
+}
+
+#content a:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+#postamble p {
+    margin: 0px;
+}
+
+#title {
+    margin: auto;
+    overflow: hidden;
+    width: 45em;
+}
+
+.src {
+    font-size: small;
+    overflow: visible;
+    position: relative;
+}
+
+.src-bash:before {
+    content: 'sh';
+}
+
+.src-gams:before {
+    content: 'GAMS';
+}
+
+.src-jacaranda:before {
+    content: 'Jacaranda';
+}
+
+.src-octave:before {
+    content: 'Octave';
+}
+
+.src-perl:before {
+    content: 'Perl';
+}
+
+.src-R:before {
+    content: 'R';
+}
+
+.src-sh:before {
+    content: 'sh';
+}
+
+.src-sql:before {
+    content: 'SQL';
+}
+
+.src:before {
+    background: #ffffff;
+    border: 1px solid #000000;
+    font-size: small;
+    padding: 1px;
+    position: absolute;
+    top: -15px;
+}
+
+.tag {
+    background-color: white;
+    color: #bebebe;
+    float: right;
+}
+
+.tag span:before {
+    content: ": ";
+}
+
+.tag:after {
+    content: ": ";
+}
+
+.validation {
+    display: none;
+}

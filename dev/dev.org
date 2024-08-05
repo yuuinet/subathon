@@ -1,0 +1,177 @@
+#+TITLE: Página dos devs da subathon do 61
+#+SUBTITLE: é isso ai [[https://www.twitch.tv/omeiaum][=m]]
+#+HTML_HEAD: <base target="_blank" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="meiaum.css"/>
+#+OPTIONS: toc:nil author:nil num:nil ':t
+#+STARTUP: overview
+#+EXPORT_FILE_NAME: index.html
+
+* coisas já funcionando
++ [[https://tilde.town/~sekva/meiaum/][Conta Engraçada™]]
++ [[https://www.lexpdev.xyz/subathon/][Barra de progresso]]
++ [[https://subathon.meuportifa.com][Calculadora de quanto falta]]
++ [[https://sites.google.com/view/timerprapiscar][Timer pra piscar]]
+* ideias para próximos projetos
+** times de comentaristas do chat [jovt_]
+
+#+begin_details TLDR :title-color "#515151"
+tem times no chat, cada um do chat entra num time, o time que mais falar ganha
+#+end_details
+
+A ideia é criar grupos no chat e incentivar comentários. No fim da live é anunciado qual o pódio com os times que mais comentaram.
+
+*** Criação de times
+O chat pode criar times nomeados (facções) com o comando:
++ !criartime <nome do time>
+
+Ao criar o time, o usuário é automaticamente colocado nesse time.
+
+*** Entrando e saindo de times
+Um user pode entrar num time com:
++ !entrarnotime <nome do time>
+
+Sair do time:
++ !sairdotime
+
+Melhor não ter como consultar o time (pode induzir spam). O liver vai ter uma telinha mostrando os times, quem faz parte dos time (incluindo o total de participantes dele), e a pontuação de cada time.
+
+*** Funcionamento
+No inicio da live, o liver abre um programa que monitora o chat. A cada comentário, o programa:
++ Pega o nick do usuário
++ Verifica se é algum comando
++ Caso não seja um comando, é verificado se o user que comentou pertence a um time, se sim, somasse um no score do time, se não, o comentário é ignorado
++ Caso seja um comando, interprete-o
++ Ao fim da live, é anunciado o placar
+
+**** Gerenciamento dos times
+O liver pode excluir times como bem entender, já que né...
+
+** sistema de concurso de musica (mata-mata) com votação pelo chat [Enigma Hall]
+
+#+begin_details TLDR :title-color "#515151"
+de tempos em tempos tem uma "fight" entre duas musicas
+#+end_details
+
+Estamos fazendo um evento de música que todo mundo pode participar, você vai escolher um clipe de música no youtube para te representar em uma batalha musical que elegerá a melhor música do chat. Se duas ou mais pessoas escolherem a mesma música, estarão fora da competição.
+
+Os sobreviventes que tiverem músicas únicas serão colocados em categorias e a cada dia o meia um jogará um categoria na live onde assistirá de dois em dois clipes escolhendo o melhor até que um vença todos.
+
+*** Categorias
+Batidão: Aquelas músicas que você ouve e é difícil ficar parado. As subcategorias são Batidão Banger que
+faz você reagir no ritmo e Batidão Clássico que te coloca em uma montanha russa de emoções.
+
+Profunda: As músicas onde a letra é tão importante que as fazem serem lembradas para sempre. Que tem as
+Subcategorias Profunda Divertida que te passam uma mensagem positiva e as Profunda Triste, aquelas que
+te comovem e fazem você encarar as dificuldades.
+
+Artístico: Os clipes que são obras de arte que você não tem coragem de pular. Subcategorias o Artístico
+Belo que é simplesmente lindo de assistir e o Artístico Caótico que pode ter destruição e monstros sendo
+impressionantes.
+
+
+Então escolha seu clipe, Sua categoria e subcategoria no formulário abaixo e se ninguém escolher o mesmo, o Meiaum vai assistir o seu clipe na live. Você pode inclusive escrever em poucas palavras o porque escolheu esse clipe.
+
+Temos uma ou mais categorias Extra que não podem ser selecionada mas que será usada para alocar o excedente e ajustes podem ser feitos para balancear as categorias. Se você não aparecer na categoria que escolheu, quem sabe você não é um EXTRA?
+
+A Final que vai decidir o vencedor acontecerá no mesmo dia da categoria Extra, totalizando 7 dias. Lembrem-se de respeitar as regras da twitch. Se você escolher um clipe que infrinja a regra da plataforma que passe do valor artístico e tenha nudez e violência desnecessária você pode ser banido então escolha com sabedoria.
+
+*** Dados
+
++ Nick do Participante no chat da Twitch: autoexplicativo mas pode ser do discord se for melhor.
++ Clipe: para o link do vídeo
++ Categoria: <Selecionável> Batidão Banger, Batidão Clássico, Profunda Divertida, Profunda Triste, Artístico Belo e Artístico Caótico.
++ Motivo de Escolha: com duas linhas de espaço para a pessoa dizer o porque o clipe dela é especial.
+
+Cabe aos Devs decidirem a melhor forma de fazer isso, se vão usar um site, ou se vão conseguir programar pelo discord, o importante é conseguir reunir isso no banco de dados e depois conseguir extrair e montar as listas por categoria. Após fazer uma média, todos os participantes excedentes são colocados na categoria EXTRA.
+
+O mesmo vale para a apresentação do jogo. O programa escolhido que vai aparecer na live deve abrir de dois em dois links de uma categoria e mostrar em baixo do clipe o nome do participante que escolheu e o motivo dele ter escolhido para que o meiaum possa ler e assistir o clipe. Também deve funcionar para colocar o clipe em tela cheia e ter um botão acima de cada clipe que servirá para definir o vencedor.
+
+*** Dev
+
+Com as parte até aqui programadas e funcionando, terá informação suficiente para saber quantos clipes tem por categoria e ter uma boa ideia do tempo mínimo que irá levar para assistir todos.
+
+Após assistir os dois clipes o Meiaum diz o seu preferido e abre uma enquete de 30 segundos, o voto dele vale 25% então o chat ainda tem chance de mudar a escolha final. Terminada a enquete, adiciona 25% do voto do Meiaum ao resultado e o que for maior vence a rodada e então
+é só clicar no botão acima do clipe para ir para a próxima.
+
+Quando as músicas que venceram a primeira parte começarem a se enfrentar não terá mais enquete, fica a critério do Meiaum comentar o que quiser ou assistir um pedaço do clipe, assim a segunda parte será mais dinâmica.
+Ao final de cada dia uma categoria terá sua música vencedora e no último dia o programa ja monta a chave da final com as músicas de todas as categorias.
+
+Cabe decidir com o Meiaum se o usuário vencedor recebe algum prêmio e qual. É preciso que o sistema gere uma lista no final dos usuários que foram desclassificados com o clipe que escolheram para garantir a transparência.
+** joguinho interativo com o chat do teorema do macaco infinito um tempo atrás. [Kizza]
+
+#+begin_details TLDR :title-color "#515151"
+o chat vai falando, o macaco pode ou não escolher um comentário, e se escolher vai escolher uma letra aleatória do comentário, e se for a próxima adiciona no texto
+#+end_details
+
+A ideia é o liver escolher um texto e o texto ir sendo escrito aleatoriamente por um macaco. O pograminha lê todas as mensagens do chat e pra cada uma:
+
++ Joga um d100 pra aquela mensagem
++ Se o valor for menor que uma porcentagem estipulada, a mensagem é ignorada
++ Se a mensagem não for ignorada, é escolhido *apenas* um carácter da mensagem
++ Se o carácter for o proximo a ser escrito, então ele é escrito, caso contrario nada acontece
+
+** linha do tempo [luscano]
+
+#+begin_details TLDR :title-color "#515151"
+acho que não precisa né?
+#+end_details
+
++ [luscano] que tal fazer uma linha do tempo da subathon? tipo, com clipes, doações grandes ou engraçadas, etc?
++ [sekva] a gente ir rolando pra baixo e vai passando pelos acontecimentos
+
+** bot do firstMuliro [Kizza]
+bot q quando a pessoa digita "quantos dias" ou qualquer pergunta facilmente respondida pelo titulo da live (ou qualquer outra informação conhecida), o bot responde com o titulo da live e um link pra uma aula de alfabetização do maternal
+** coisas que acho que não rola
++ um jogo dos pererecos [meep087]
++ o novo twitter [eunael]
++ um site q marca cada vez q o meiaum fala é duro [Neptune1516]
++ coisas com IA [sekva]
+
+* agradecimentos
++ 💜 davi que disponibilizou a api do timer pra nois
+* sites dos nossos devs
++ [[https://justdavi.dev/][davi]]
++ [[https://github.com/jho-on/][jho___on]]
++ [[https://www.lexpdev.xyz/][Lexpdev(luscano)]]
++ [[https://eufizumacoisa.top/][EuFizUmaCoisa]]
++ [[https://sekva.lol/][sekva]]
+* COMMENT timer
+#+BEGIN_SRC emacs-lisp
+  (defun iso8601-to-epoch (iso8601-string)
+    "Converts ISO 8601 date string to Unix Epoch Timestamp."
+    (let* ((time-list (parse-time-string iso8601-string))
+           (second (nth 0 time-list))
+           (minute (nth 1 time-list))
+           (hour (nth 2 time-list))
+           (day (nth 3 time-list))
+           (month (nth 4 time-list))
+           (year (nth 5 time-list))
+           (timezone (nth 8 time-list)))
+      (floor (float-time (encode-time second minute hour day month year timezone)))))
+
+  (defun days-between-epochs (epoch1 epoch2)
+    "Calcula o número de dias entre duas datas em formato Unix Epoch."
+      (/ (abs (- epoch1 epoch2)) 86400))
+
+  (let* (
+         (epoch-data-inicio (iso8601-to-epoch "2024-04-27T15:00:00-0300"))
+         (timer-da-live (time-add (current-time)
+                                  (+
+                                   (* 3600 (read-number "Diga quantas horas: " ))
+                                   (* 60 (read-number "Diga quantos minutos: " ))
+                                   (read-number "Diga quantos segundos: " ))))
+         (epoch-da-live (floor (time-to-seconds timer-da-live)))
+         (strdata (format-time-string "A live termina as %T do dia %d/%m/%Y" timer-da-live))
+         (strfinal (concat
+                    strdata
+                    ".\nA live vai durar "
+                    (number-to-string (days-between-epochs epoch-da-live epoch-data-inicio)) " dias"  )))
+
+    (kill-new strfinal)
+    (message strfinal))
+#+END_SRC
+
+* COMMENT vars
+# Local Variables:
+# eval: (setq org-export-headline-levels 5)
+# End:
