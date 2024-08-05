@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" id="mainStyles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Barra de progresso da subathon</title>
+</head>
+<body onload="showImage(); move();">
+    <div class="container center" style="min-height: 970px;">
+        <h1>Quanto tempo resta pra live do meiaum acabar?</h1>
+        <img id="emote" class="emote" alt="Atualize a página para mudar o emote!">
+        <hr>
+        <!--<div class="subathon_bar">(insira a barra de progresso aqui)</div> -->
+        <p class="note">Barra de progresso que demonstra o tempo usado e quanto tempo ele ainda terá que usar.</p>
+        <div id="subathon-bar">
+            <div id="progbar"></div>
+        </div> 
+        <p>O Meiaum está a <span id="pastedDays">...</span> dias seguidos em subathon 
+            e ainda tem <span id="leftDays">...</span> dias restantes para o timer zerar. 
+            Ele está a <span id="pastedPercentage">...</span>% da sua jornada, mas ainda tem 
+            <span id="leftPercentage">...</span>% para ficar em live.</p>
+        <hr>
+        <h3>Apoie o Meiaum e suba o timer</h3>
+        <p class="note">"Quero apenas ajudar o Meiaum."</p>
+        <button onclick="window.open('https://pixie.gg/meiaum', '_blank')" class="buttonlink">Mandar um pix</button> ou
+        <button onclick="window.open('https://twitch.tv/omeiaum', '_blank')" class="buttonlink">Vire um sub</button>
+        <br>
+        <hr>
+        <p class="note">"Quero subir MUITO o timer sem gastar nada."</p>
+        <button onclick="window.open('https://tilde.town/~sekva/meiaum/', '_blank')" class="buttonlink">Conheça a Conta Engraçada™</button>
+        <hr>
+        <p class="note">"Não tenho nada mas quero ajudar ele."</p>
+        <p>Você pode divulgar a subathon ou apenas <a href="https://twitch.tv/omeiaum">assistir ela</a>, sua presença é importante (:</p>
+        <hr>
+        <a href="index.html">Voltar</a>
+        <hr>
+        <div class="creditos">
+            <p>Feito por <a href="https://www.lexpdev.xyz/">LexpDev</a>
+             com ❤️ em 2024.<br>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="emotes_aleatorios.js"></script>
+</body>
+</html>

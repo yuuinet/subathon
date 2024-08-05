@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" id="mainStyles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Barra de progresso da subathon</title>
+</head>
+<body onload="showImage(); move();">
+    <div class="container center" style="min-height: 680px;">
+        <h1>Quanto tempo resta pra live do meiaum acabar?</h1>
+        <img id="emote" class="emote" alt="Atualize a página para mudar o emote!">
+        <hr>
+        <!--<div class="subathon_bar">(insira a barra de progresso aqui)</div> -->
+        <p class="note">Barra de progresso que demonstra o tempo usado e quanto tempo ele ainda terá que usar.</p>
+        <div id="subathon-bar">
+            <div id="progbar"></div>
+        </div> 
+        <p>O Meiaum está a <span id="pastedDays">...</span> dias seguidos em subathon 
+        e ainda tem <span id="leftDays">...</span> dias restantes para o timer zerar. 
+        Ele está a <span id="pastedPercentage">...</span>% da sua jornada, mas ainda tem 
+        <span id="leftPercentage">...</span>% para ficar em live.</p>
+        <hr>
+        <button onclick="window.location.href='como_aumentar.html'" class="buttonlink">Quero aumentar os dias<br>restantes e apoiar o meiaum!</button>
+        <hr>
+        <div class="creditos">
+            <p>Feito por <a href="https://www.lexpdev.xyz/">LexpDev</a>
+             com ❤️ em 2024.<br>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="emotes_aleatorios.js"></script>
+</body>
+</html>

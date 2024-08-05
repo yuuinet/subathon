@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'chunkfive';
+    src: url('files/chunkfive.ttf');
+}
+
+:root{
+    --pallete1: #10001b;
+    --pallete2: #ffd14a;
+    --pallete3: #fd6e50;
+    --pallete4: #f33163;
+    --pallete5: #c42975;
+    --pallete6: #ffffff;
+}
+
+body{
+    background: var(--pallete1);
+    color: #000000;
+    font-family: 'chunkfive';
+    letter-spacing: 1px;
+}
+
+.container{
+    margin: auto;
+    width: 350px;
+    position: relative;
+    box-shadow: 5px 5px var(--pallete5);
+    border-radius: 5px;
+    background-color: var(--pallete6);
+    margin-top: 5vh;
+    padding: 10px;
+    height: 50vh;
+    max-height: auto;
+}
+
+.emote{
+    min-height: 214px;
+    border: var(--pallete3) outset 3px;
+    max-width: 330px;
+    image-rendering: pixelated;
+}
+
+.center{
+    text-align: center;
+}
+
+a{
+    animation-name: a;
+    animation-duration: 0.2s;
+    color: var(--pallete4);
+}
+
+a:hover{
+    animation-name: hover-a;
+    animation-duration: 0.2s;
+    color: var(--pallete5);
+}
+
+.creditos{
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+#subathon-bar {
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+}
+  
+#progbar {
+    width: 0%;
+    height: 30px;
+    background-color: var(--pallete3);
+    text-align: center;
+    line-height: 35px;
+    color: white;
+}
+
+.buttonlink {
+    animation-name: button;
+    animation-duration: 0.1s;
+    border: var(--pallete5) outset 5px;
+    border-radius: 5px;
+    background-color: var(--pallete2);
+    font-size: 20px;
+    font-family: 'chunkfive';
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.buttonlink:hover{
+    animation-name: hoverbutton;
+    animation-duration: 0.1s;
+    font-size: 19px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #d8b13d;
+}
+
+@keyframes hoverbutton {
+    from {
+        font-size: 19.8px;
+        background-color: var(--pallete2);
+    }
+    to {
+        font-size: 19px;
+        margin: 5px;
+        background-color: #d8b13d;
+    }
+}
+
+@keyframes button {
+    from {
+        font-size: 19px;
+        margin: 5px;
+        background-color: #d8b13d;
+    }
+    to {
+        font-size: 19.8px;
+        background-color: var(--pallete2);
+    }
+}
+
+@keyframes hover-a {
+    from {
+        color: var(--pallete4);
+    }
+    to {
+        color: var(--pallete5);
+    }
+}
+
+@keyframes a {
+    from {
+        color: var(--pallete5);
+    }
+    to {
+        color: var(--pallete4);
+    }
+}
+
+@keyframes progress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.note{
+    font-size: 12px;
+    color: #9f9f9f;
+    font-style: italic;
+    text-align: left;
+}
