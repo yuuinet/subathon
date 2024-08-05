@@ -150,6 +150,21 @@ table, th, td {
     filter: brightness(70%);
 }
 
+#content h1 > a {
+    background-color: initial;
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: inherit;
+    font-family: "IBM Plex Sans";
+}
+
+
+
+
+
+
 #postamble p {
     margin: 0px;
 }

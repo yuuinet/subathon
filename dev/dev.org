@@ -1,4 +1,4 @@
-#+TITLE: Página dos devs da subathon do 61
+#+TITLE: Página dos devs da [[https://subathon.link/][subathon]] do 61
 #+SUBTITLE: é isso ai [[https://www.twitch.tv/omeiaum][=m]]
 #+HTML_HEAD: <base target="_blank" />
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="meiaum.css"/>
@@ -121,6 +121,30 @@ acho que não precisa né?
 
 ** bot do firstMuliro [Kizza]
 bot q quando a pessoa digita "quantos dias" ou qualquer pergunta facilmente respondida pelo titulo da live (ou qualquer outra informação conhecida), o bot responde com o titulo da live e um link pra uma aula de alfabetização do maternal
+** rede social de desenhos [EuFizUmaCoisa]
+
+#+begin_details TLDR :title-color "#515151"
+todos os posts são desenhados dentro do proprio site, não tem like. tem compartilhamento.
+#+end_details
+
+desenhos.space
+https://desenhos.space/
+
+*** Ideia geral
+o desenhos.space é uma "rede social"de desenhos feitos digitalmente! tudo é desenhado, sua foto de perfil, postagens, banners e tudo mais. Não terá like, comentários ou qualquer outro tipo de númerozinho que faça o ceu cérebro ficar chapadão de dopamina barata!  No máximo, algum método de compartilhamento e salvar na sua coleção pessoal (estes números também ficarão invisíveis). A ideia no geral, é criar uma comunidade bonita e remontar um pouco a simplicidade da internet de antigamente, onde você postava as coisas unicamente para compartilhar com as pessoas, sem necessariamente esperar algo em troca, criando uma comunidade digital bonita e feliz.
+
+*** Adicionando amigos
+Para adicionar amigos, você precisa ser de fato amigo daquela pessoa, por isso, para adicionar, é necessário compartilhar um link único de amizade digitalmente ou fisicamente escaneado por QR code. Este link terá UM uso único, para a pessoa a quem você enviou. Isso garante que você saiba e conheça minimamente as pessoas que estão no seu círculo de amizade digital.
+
+*** Comunidades
+As comunidades serão criadas apenas por perfis verificados, limitando-se apenas a UMA comunidade por pessoa. O intuito das comunidades, é unir pessoas que gostam de desenhar coisas específicas, como jogos, fanarts, filmes e etc.
+
+*** Perfis verificados
+NADA DE PAGAMENTO POR AQUI! Para ter um perfil verificado, você precisará enviar um email solicitando verificação manual. A utilidade da verificação, é fazer com que os participantes do desenhos.space sejam mais qualificados e para que possamos averiguar se aquela pessoa é confiável.
+
+*** Postagens
+as postagens serão limitadas a uma a cada 1h por participante e serão analizadas manualmente para serem aprovadas, desta forma, o desenhos.space se torna um lugar seguro e saudável pra todo mundo.
+
 ** coisas que acho que não rola
 + um jogo dos pererecos [meep087]
 + o novo twitter [eunael]
