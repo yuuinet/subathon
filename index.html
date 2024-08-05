@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>subathon.link</title>
+    <title>Dev da Subathon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./scr/icons/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            --meiaumBlack: rgb(16, 0, 27);
+            --meiaumOrange: rgb(253, 110, 80);
+            --meiaumPink: rgb(243, 49, 99);
+            --meiaumPurple: rgb(196, 41, 117);
+            --meiaumWhite: rgb(255, 255, 255);
+            --meiaumYellow: rgb(255, 209, 74);
+        }
+
+        * {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        body {
+            background-color: var(--meiaumBlack);
+            color: var(--meiaumWhite);
+            font-family: "Space Grotesk", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header-container {
+            background-color: var(--meiaumWhite);
+            padding: 20px;
+            box-shadow: 0 10px 0 var(--meiaumPink);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .header-title {
+            font-size: 2rem;
+            color: var(--meiaumBlack);
+            margin: 0;
+        }
+
+        .projects-container {
+            flex: 1;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        .project-box {
+            background-color: var(--meiaumWhite);
+            padding: 20px;
+            box-shadow: 5px 5px 0 var(--meiaumPink);
+            border: 1px solid var(--meiaumBlack);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            max-height: 500px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 3px 3px 0 var(--meiaumBlack);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--meiaumBlack);
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: var(--meiaumPurple);
+            margin-bottom: 15px;
+        }
+
+        .project-author {
+            font-size: 1rem;
+            color: var(--meiaumBlack);
+            margin-bottom: 15px;
+        }
+
+        .view-button {
+            font-size: 1rem;
+            color: var(--meiaumWhite);
+            background-color: var(--meiaumOrange);
+            text-decoration: none;
+            padding: 10px 20px;
+            box-shadow: 3px 3px 0 var(--meiaumBlack);
+        }
+
+        .view-button:hover {
+            background-color: var(--meiaumPink);
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>A qualquer momento</h1>
+    <div class="header-container">
+        <img src="./favicon.png" alt="Logo da Subathon" style="width: 50px; height: 50px;">
+        <h1 class="header-title">Projetos dos Devs da Subathon</h1>
+    </div>
+
+    <div class="projects-container">
+        <div class="project-box">
+            <img class="project-image" src="./src/projectimages/umafoto.png" alt="Imagem do Projeto">
+            <div class="project-title">Uma Foto</div>
+            <div class="project-description">Um site onde você pode postar apenas UMA FOTO a cada hora, mas só UMA PESSOA consegue.</div>
+            <div class="project-author"><a href="https://eufizumacoisa.top" target="_blank">Autor: João Davi (vulgo: sr. domínio)</a></div>
+            <a href="https://umafoto.site/" class="view-button" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="project-box">
+            <img class="project-image" src="./src/projectimages/quantotempo.png" alt="Imagem do Projeto">
+            <div class="project-title">Quanto tempo falta?</div>
+            <div class="project-description">Um site bem legal para mostrar quanto tempo falta para acabar (Pfffft) a live.</div>
+            <div class="project-author"><a href="https://www.lexpdev.xyz/" target="_blank">Autor: LuscanoDev</a></div>
+            <a href="https://www.lexpdev.xyz/subathon/" class="view-button" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="project-box">
+            <img class="project-image" src="./src/projectimages/conta.png" alt="Imagem do Projeto">
+            <div class="project-title">Conta Engraçada</div>
+            <div class="project-description">Um conceito interessante, é uma forma de mostrar o poder do proletariado sobre o LX (aka. MeiaUm). O site nos mostra que, caso todos que estão vendo naquele momento doem UM REAL, ele ficará em live pelo tempo mostrado.</div>
+            <div class="project-author"><a href="https://sekva.lol/" target="_blank">Autor: Sekva</a></div>
+            <a href="https://tilde.town/~sekva/meiaum/" class="view-button" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="project-box">
+            <img class="project-image" src="./src/projectimages/piscar.png" alt="Imagem do Projeto">
+            <div class="project-title">Timer para Piscar</div>
+            <div class="project-description">Isso mesmo, um timer onde você sincroniza com TODO MUNDO a hora de piscar</div>
+            <div class="project-author"><a href="#" target="">Autor: Procurando...</a></div>
+            <a href="https://sites.google.com/view/timerprapiscar" class="view-button" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="project-box">
+            <img class="project-image" src="./src/projectimages/calculadora.png" alt="Imagem do Projeto">
+            <div class="project-title">Calculadora</div>
+            <div class="project-description">Ai ai, vamos ver quando o nosso queridíssimo streamer ficará sob a vista nefasta do chat.</div>
+            <div class="project-author"><a href="#" target="">Autor: Procurando...</a></div>
+            <a href="https://subathon.meuportifa.com/" class="view-button" target="_blank">Ver Projeto</a>
+        </div>
+
+    </div>
 </body>
+
 </html>
