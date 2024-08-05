@@ -6,7 +6,7 @@
 #+STARTUP: overview
 #+EXPORT_FILE_NAME: index.html
 
-* coisas já funcionando
+* COMMENT coisas já funcionando
 + [[https://tilde.town/~sekva/meiaum/][Conta Engraçada™]]
 + [[https://www.lexpdev.xyz/subathon/][Barra de progresso]]
 + [[https://subathon.meuportifa.com][Calculadora de quanto falta]]
