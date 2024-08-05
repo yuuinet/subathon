@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('/assets/ComicSansMS3.ttf');
+}
+
+:root{
+    --meiaumBlack: #10001b;
+    --meiaumYellow: #ffd14a;
+    --meiaumOrange: #fd6e50;
+    --meiaumPink: #f33163;
+    --meiaumPurple: #c42975;
+    --meiaumWhite: #ffffff;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+
+#navBar{
+    background-color: var(--meiaumWhite);
+    color: var(--meiaumBlack);
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    h1{
+        font-family: 'IBM Plex Serif';
+        margin: 7px 0px;
+        margin-left: 5px;
+    }
+
+    #links{
+        a{
+            font-family: 'IBM Plex Sans';
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 0px 5px;
+        }
+
+        a:hover{
+            color: var(--meiaumPurple);
+        }
+
+        #activated{
+            color: var(--meiaumPink);
+        }
+    }
+}
+
+
+@media (max-width:500px){
+    #navBar{
+        justify-content: center;
+    }
+    #wrapper{
+        height: calc(100dvh - 76px);
+    }
+}

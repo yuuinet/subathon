@@ -1,0 +1,60 @@
+@charset "UTF-8";
+#wrapper {
+  background-color: var(--meiaumBlack);
+  width: 100%;
+  min-height: calc(100dvh - 29px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#wrapper #contentBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70dvw;
+  height: fit-content;
+}
+#wrapper #contentBlock #contentHeader {
+  color: var(--meiaumWhite);
+  font-family: "IBM Plex Serif";
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+#wrapper #contentBlock #contentHeader h2 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#wrapper #contentBlock #mainContent {
+  padding: 20px;
+  background-color: var(--meiaumWhite);
+  color: var(--meiaumBlack);
+  font-size: 22px;
+  font-family: "IBM Plex Sans";
+  text-align: left;
+  box-shadow: 5px 5px var(--meiaumPurple);
+}
+#wrapper #contentBlock #mainContent p {
+  margin: 0;
+}
+#wrapper #contentBlock #mainContent p span {
+  font-weight: 800;
+  font-style: italic;
+}
+#wrapper #contentBlock #mainContent #citação {
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--meiaumOrange);
+}
+
+@media (max-width: 800px) {
+  #wrapper #contentBlock {
+    max-width: 85dvw;
+  }
+}

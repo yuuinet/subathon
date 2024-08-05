@@ -1,0 +1,52 @@
+:root {
+  --meiaumBlack: rgb(16, 0, 27);
+  --meiaumYellow: rgb(255, 209, 74);
+  --meiaumOrange: rgb(253, 110, 80);
+  --meiaumPink: rgb(243, 49, 99);
+  --meiaumPurple: rgb(196, 41, 117);
+  --meiaumWhite: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#navBar {
+  background-color: var(--meiaumWhite);
+  color: var(--meiaumBlack);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#navBar h1 {
+  font-family: "IBM Plex Serif";
+  margin: 7px 0px;
+  margin-left: 5px;
+}
+#navBar #links a {
+  font-family: "IBM Plex Sans";
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0px 5px;
+}
+#navBar #links a:hover {
+  color: var(--meiaumPurple);
+}
+#navBar #links #activated {
+  color: var(--meiaumPink);
+}
+
+@media (max-width: 500px) {
+  #navBar {
+    justify-content: center;
+  }
+  #wrapper {
+    height: calc(100dvh - 76px);
+  }
+}
