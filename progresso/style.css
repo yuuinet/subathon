@@ -1,4 +1,4 @@
-@font-face {
+-@font-face {
     font-family: 'chunkfive';
     src: url('files/chunkfive.ttf');
 }
@@ -21,14 +21,14 @@ body{
 
 .container{
     margin: auto;
-    width: auto;
+    width: 350px;
     position: relative;
     box-shadow: 5px 5px var(--pallete5);
     border-radius: 5px;
     background-color: var(--pallete6);
     margin-top: 5vh;
     padding: 10px;
-    height: 50vh;
+    height: auto;
     max-height: auto;
 }
 
